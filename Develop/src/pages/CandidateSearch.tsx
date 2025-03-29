@@ -16,6 +16,14 @@ const CandidateSearch = () => {
     bio: null
   })
   
+  const [currentCandidateId, setCurrentCandidateId] = useState<number>(0);
+
+  const searchSpecificCandidate = async (user: string) => {
+    const data: Candidate = await searchGithubUser(user);
+
+    setSelectedCandidate(data);
+  }
+
   const candidateDetermination = async (candidateIsChoosen: boolean) => {
     if (candidateIsChoosen) {
       let parsedCandidates: Candidate[] = [];
@@ -29,17 +37,10 @@ const CandidateSearch = () => {
   if (currentCandidateId + 1 < results.length) {
     setCurrentCandidateId(currentCandidateId + 1);
     await searchSpecificCandidate(results[currentCandidateId + 1].login || '')
+  } else {
     setCurrentCandidateId(0);
     await searchSpecificCandidate();
   };
-
-  const [currentCandidateId, setCurrentCandidateId] = useState<number>(0);
-
-  const searchSpecificCandidate = async (user: string) => {
-    const data: Candidate = await searchGithubUser(user);
-
-    setSelectedCandidate(data);
-  }
 
   return <h1>Candidate Search</h1>;
 };
