@@ -48,8 +48,13 @@ const CandidateSearch = () => {
   } else {
     setCurrentCandidateId(0);
     await searchCandidates();
-  };
-}
+  }
+};
+
+useEffect(() => {
+  searchCandidates();
+  searchSpecificCandidate(candidates[currentCandidateId]?.login || '');
+}, []);
 
   return <h1>Candidate Search</h1>;
 };
