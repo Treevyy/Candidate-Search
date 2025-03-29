@@ -3,7 +3,7 @@ import { searchGithub, searchGithubUser } from '../api/API';
 import type { Candidate } from '../interfaces/Candidate.interface.tsx'
 
 const CandidateSearch = () => {
-  const [Candidates, setCandidates] = useState<Candidate[]>([]);
+  const [candidates, setCandidates] = useState<Candidate[]>([]);
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate>({
     login: null,
     id: null,
@@ -24,8 +24,8 @@ const CandidateSearch = () => {
     setSelectedCandidate(data);
   }
 
-  const searchCandidates = async (user: string) => {
-    const data: Candidate = await searchGithub();
+  const searchCandidates = async () => {
+    const data: Candidate[] = await searchGithub();
 
     setCandidates(data);
 
@@ -42,9 +42,9 @@ const CandidateSearch = () => {
     parsedCandidates.push(selectedCandidate);
     localStorage.setItem('savedCandidates', JSON.stringify(parsedCandidates));
   };
-  if (currentCandidateId + 1 < results.length) {
+  if (currentCandidateId + 1 < candidates.length) {
     setCurrentCandidateId(currentCandidateId + 1);
-    await searchSpecificCandidate(results[currentCandidateId + 1].login || '')
+    await searchSpecificCandidate(candidates[currentCandidateId + 1].login || '')
   } else {
     setCurrentCandidateId(0);
     await searchCandidates();
