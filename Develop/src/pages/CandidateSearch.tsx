@@ -3,7 +3,7 @@ import { searchGithub, searchGithubUser } from '../api/API';
 import type { Candidate } from '../interfaces/Candidate.interface.tsx'
 
 const CandidateSearch = () => {
-  const [Candidate, setCandidate] = useState<Candidate[]>([]);
+  const [Candidates, setCandidates] = useState<Candidate[]>([]);
   const [selectedCandidate, setSelectedCandidate] = useState<Candidate>({
     login: null,
     id: null,
@@ -24,6 +24,14 @@ const CandidateSearch = () => {
     setSelectedCandidate(data);
   }
 
+  const searchCandidates = async (user: string) => {
+    const data: Candidate = await searchGithub();
+
+    setCandidates(data);
+
+    await searchSpecificCandidate(data[currentCandidateId].login || '');
+  }
+
   const candidateDetermination = async (candidateIsChoosen: boolean) => {
     if (candidateIsChoosen) {
       let parsedCandidates: Candidate[] = [];
@@ -39,8 +47,9 @@ const CandidateSearch = () => {
     await searchSpecificCandidate(results[currentCandidateId + 1].login || '')
   } else {
     setCurrentCandidateId(0);
-    await searchSpecificCandidate();
+    await searchCandidates();
   };
+}
 
   return <h1>Candidate Search</h1>;
 };
