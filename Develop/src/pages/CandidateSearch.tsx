@@ -5,15 +5,15 @@ import type { Candidate } from '../interfaces/Candidate.interface.tsx'
 const CandidateSearch = () => {
   const [Candidate, setCandidate] = useState<Candidate[]>([]);
   const [results, setResults] = useState<Candidate>({
-    login: '',
-    id: '',
-    avatar_url: '',
-    html_url: '',
-    name: '',
-    location: '',
-    email: '',
-    company: '',
-    bio: ''
+    login: null,
+    id: null,
+    avatar_url: null,
+    html_url: null,
+    name: null,
+    location: null,
+    email: null,
+    company: null,
+    bio: null
   })
   return <h1>CandidateSearch</h1>;
 };
