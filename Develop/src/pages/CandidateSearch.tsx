@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { searchGithub, searchGithubUser } from '../api/API';
 import type { Candidate } from '../interfaces/Candidate.interface.tsx'
+import CandidateCard from '../components/CandidateCard.tsx';
 
 const CandidateSearch = () => {
   const [candidates, setCandidates] = useState<Candidate[]>([]);
@@ -55,8 +56,13 @@ useEffect(() => {
   searchCandidates();
   searchSpecificCandidate(candidates[currentCandidateId]?.login || '');
 }, []);
-
-  return <h1>Candidate Search</h1>;
+  
+  return (
+    <>    
+      <h1>Candidate Search</h1>;
+      <CandidateCard currentCandidateId={currentCandidateId} candidateDetermination={candidateDetermination} />
+    </>
+  );
 };
 
 export default CandidateSearch;
