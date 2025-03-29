@@ -15,7 +15,7 @@ const CandidateSearch = () => {
     company: null,
     bio: null
   })
-  return <h1>CandidateSearch</h1>;
+  return <h1>Candidate Search</h1>;
 };
 
 export default CandidateSearch;
