@@ -35,6 +35,7 @@ const SavedCandidateList = () => {
                     <th>Location</th>
                     <th>Email</th>
                     <th>Company</th>
+                    <th>Bio</th>
                     <th>Remove</th>
                 </tr>
             </thead>

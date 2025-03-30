@@ -54,7 +54,7 @@ const SavedCandidates = ({
                 </td>
             </>
         ) : (
-            <h2>No Saved candidates available</h2>
+            <h2>No candidates have been saved.</h2>
         )}
       </tr>  
     )

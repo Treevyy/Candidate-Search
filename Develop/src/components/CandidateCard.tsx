@@ -85,7 +85,7 @@ const CandidateCard = ({ currentCandidate, candidateDetermination }: CandidateCa
                     </section>
                 </>
             ) : (
-                <h2>No Candidates at this time</h2>    
+                <h2>Currently, there are no candidates being displayed.</h2>
             )}
         </section>
     );

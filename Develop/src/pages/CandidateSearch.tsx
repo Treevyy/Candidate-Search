@@ -59,8 +59,8 @@ useEffect(() => {
   
   return (
     <>    
-      <h1>Candidate Search</h1>;
-      <CandidateCard currentCandidateId={currentCandidateId} candidateDetermination={candidateDetermination} />
+      <h1>Candidate Search</h1>
+      <CandidateCard currentCandidate={selectedCandidate} candidateDetermination={candidateDetermination} />
     </>
   );
 };
