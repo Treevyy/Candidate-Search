@@ -14,7 +14,7 @@ const SavedCandidateList = () => {
         }
         setPotentialCandidates(candidates);
     }, []);
-    const remooveCandidate = (id: number) => {
+    const removeCandidate = (id: number) => {
         let parsedCandidates: Candidate[] = [];
         const savedCandidates = localStorage.getItem('savedCandidates');
         if (typeof savedCandidates === 'string') {

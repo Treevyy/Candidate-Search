@@ -59,3 +59,5 @@ const SavedCandidates = ({
       </tr>  
     )
 }
+
+export default SavedCandidates;
