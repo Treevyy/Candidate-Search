@@ -4,7 +4,7 @@ import type { Candidate } from '../interfaces/Candidate.interface.tsx'
 
 const SavedCandidateList = () => {
     const [potentialCandidates, setPotentialCandidates] = useState<Candidate[]>([]);
-    }
+    
 
     useEffect(() => {
         const savedCandidates = localStorage.getItem('savedCandidates');
@@ -50,3 +50,5 @@ const SavedCandidateList = () => {
         </table>
     )
     }
+
+    export default SavedCandidateList;
