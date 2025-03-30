@@ -15,13 +15,13 @@ const CandidateCard = ({ currentCandidate, candidateDetermination }: CandidateCa
                         <img
                             src={currentCandidate.avatar_url}
                             alt={`Avatar of ${currentCandidate.login}`}
-                            style={{ width: '100px', height: '100px' }}
+                            style={{ width: '300px', borderRadius: '30px 30px, 0 0' }}
                         />
                     ) : (
                         <img
                             src="https://via.placeholder.com/100"
                             alt={`Avatar of ${currentCandidate.login}`}
-                            style={{ width: '100px', height: '100px' }}
+                            style={{ width: '300px', borderRadius: '30px 30px, 0 0' }}
                         />
                     )}
 
@@ -29,6 +29,8 @@ const CandidateCard = ({ currentCandidate, candidateDetermination }: CandidateCa
                         style={{
                             backgroundColor: '#000',
                             width: '280px',
+                            borderRadius: '0 0 30px 30px',
+                            padding: '0 10px 10px',
                         }}
                     >
                         {currentCandidate?.html_url && currentCandidate?.login ? (
@@ -66,7 +68,7 @@ const CandidateCard = ({ currentCandidate, candidateDetermination }: CandidateCa
                         <IoRemoveCircle
                             style={{
                                 color: 'red',
-                                fontSize: '24px',
+                                fontSize: '80px',
                                 cursor: 'pointer',
                             }}
                             onClick={ () => {candidateDetermination(false) }}
@@ -76,7 +78,7 @@ const CandidateCard = ({ currentCandidate, candidateDetermination }: CandidateCa
                             onClick={() => {candidateDetermination(true)}}
                             style={{
                                 color: 'green',
-                                fontSize: '24px',
+                                fontSize: '80px',
                                 cursor: 'pointer',
                             }}
                         />
@@ -88,3 +90,5 @@ const CandidateCard = ({ currentCandidate, candidateDetermination }: CandidateCa
         </section>
     );
 };
+
+export default CandidateCard;
