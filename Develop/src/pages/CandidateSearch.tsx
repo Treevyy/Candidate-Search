@@ -54,7 +54,7 @@ const CandidateSearch = () => {
 
 useEffect(() => {
   searchCandidates();
-  searchSpecificCandidate(candidates[currentCandidateId]?.login || '');
+  searchSpecificCandidate(selectedCandidate.login || '');
 }, []);
   
   return (

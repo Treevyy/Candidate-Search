@@ -40,6 +40,7 @@ const SavedCandidates = ({
                     <a href={`mailto:${candidate.email}`}>{candidate.email}</a>
                 </td>
                 <td>{candidate.company}</td>
+                <td>{candidate.bio}</td>
                 <td>
                     <IoRemoveCircle
                         style={{
