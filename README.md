@@ -84,7 +84,7 @@ For deployment, follow the Render documentation on setting environment variables
   A demo of the application can be found at the following link: No walkthrough video is needed.
 
   ## URL Link
-  Here is the URL Link to the application: https://candidate-search-fgfk.onrender.com/SavedCandidates
+  Here is the URL Link to the application: https://candidate-search-fgfk.onrender.com/
   
   ## Contributing
   No contributions are needed for this project
