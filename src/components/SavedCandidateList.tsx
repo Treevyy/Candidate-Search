@@ -26,6 +26,7 @@ const SavedCandidateList = () => {
         localStorage.setItem('savedCandidates', JSON.stringify(parsedCandidates));
         setPotentialCandidates(parsedCandidates);
     };
+    
     return (
         <table className='table'>
             <thead>
@@ -50,6 +51,6 @@ const SavedCandidateList = () => {
             </tbody>
         </table>
     )
-    }
+    };
 
     export default SavedCandidateList;
