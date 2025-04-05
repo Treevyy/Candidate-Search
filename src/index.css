@@ -139,23 +139,28 @@ td img {
 
 @media (max-width: 768px) {
   table {
-    width: 80vw;
-    table-layout: fixed;
-    border-spacing: 0.1rem;
+      width: 100%;
   }
 
   thead {
-    display: table-header-group;
+    display: none;
   }
 
   tr {
-    display: table-row;
-    margin-bottom: 0;
+    display: block;
+    margin-bottom: 1rem;
   }
 
   td {
-    display: table-cell;
-    padding: 0.5rem; 
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   td img {
@@ -165,6 +170,9 @@ td img {
   }
 
   td::before {
-    content: none;
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: #555;
   }
 }
