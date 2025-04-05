@@ -81,7 +81,7 @@ For deployment, follow the Render documentation on setting environment variables
   <img src="assets/Screenshot 2025-04-01 233411.png" alt="Photo of the home page" width="600" style="margin-bottom: 20px;">
 
   ## Walkthrough Video
-  A demo of the application can be found at the following link: No walkthrough video is needed.
+  A demo of the application can be found at the following link: https://drive.google.com/file/d/1jgdki3ts2sGJJEtWKJ7Qu3dH7VbfXQw_/view
 
   ## URL Link
   Here is the URL Link to the application: https://candidate-search-fgfk.onrender.com/
